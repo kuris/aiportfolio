@@ -95,23 +95,25 @@
 <!-- ===================== 1. Hero Section ===================== -->
 <section id="hero-section" class="relative pt-40 pb-24 sm:pt-48 sm:pb-32 overflow-hidden hero-bg">
   <div class="absolute inset-0 -z-10 hero-glow" aria-hidden="true"></div>
-  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+   <div class="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] gap-12 lg:gap-14 items-center">
+    <div class="text-center lg:text-left">
 
     <h1 class="hero-title text-4xl sm:text-6xl font-black leading-tight tracking-tight text-slate-900">코딩 몰라도 AI로 나만의 웹사이트 만들기</h1>
 
-    <p class="mt-6 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-      현직 PM이 직접 만든 한자·영어문법·역사 학습 웹서비스 사례를 바탕으로,<br class="hidden sm:block">
+    <p class="mt-6 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+      현직 PM이 직접 만든 한자·영어문법·역사 학습 웹서비스 사례를 바탕으로,<br class="hidden sm:block lg:hidden">
       AI 도구를 활용해 누구나 웹사이트를 기획하고 제작·배포하는 방법을 알려드립니다.
     </p>
 
-    <div class="mt-7 flex flex-wrap items-center justify-center gap-2">
+    <div class="mt-7 flex flex-wrap items-center justify-center lg:justify-start gap-2">
       <span class="hero-badge"><i class="fa-solid fa-id-badge"></i>현직 PM</span>
       <span class="hero-badge"><i class="fa-solid fa-chalkboard-user"></i>AI 활용 강사</span>
       <span class="hero-badge"><i class="fa-solid fa-certificate"></i>정보처리기사</span>
       <span class="hero-badge"><i class="fa-solid fa-laptop-code"></i>교육형 웹서비스 제작</span>
     </div>
 
-    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
       <a href="#contact-section" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-7 py-3.5 rounded-full shadow-lg shadow-brand-200 transition-colors">
         <i class="fa-regular fa-paper-plane"></i>
         강의 문의하기
@@ -125,6 +127,40 @@
     <p class="mt-10 text-xs sm:text-sm text-slate-400">
       도서관 · 문화센터 · 평생학습관 · 주민센터 실습형 특강 제안 가능
     </p>
+    </div>
+
+    <!-- Hero 오른쪽: 실제 제작 사이트 미리보기 -->
+    <div class="hero-preview">
+      <p class="hero-preview-title">직접 제작한 교육형 웹서비스</p>
+      <p class="hero-preview-desc">한자·영어문법·역사 학습 사이트를 직접 기획·제작·운영하고 있습니다.</p>
+
+      <a class="preview-shot preview-shot-main" href="https://history.chatgpts.kr" target="_blank" rel="noopener noreferrer">
+        <span class="preview-frame">
+          <span class="preview-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+          <img src="images/history-preview.webp" alt="직접 제작한 역사 학습 웹서비스 화면" width="1440" height="810" loading="eager" decoding="async" fetchpriority="high" onerror="this.closest('.preview-frame').classList.add('is-missing');this.remove();">
+        </span>
+        <span class="preview-label">역사 학습</span>
+      </a>
+
+      <div class="preview-thumbs">
+        <a class="preview-shot" href="https://gram.chatgpts.kr" target="_blank" rel="noopener noreferrer">
+          <span class="preview-frame">
+            <span class="preview-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <img src="images/gram-preview.webp" alt="직접 제작한 영어 문법 학습 웹서비스 화면" width="1440" height="810" loading="eager" decoding="async" fetchpriority="high" onerror="this.closest('.preview-frame').classList.add('is-missing');this.remove();">
+          </span>
+          <span class="preview-label">영어 문법</span>
+        </a>
+        <a class="preview-shot" href="https://hanja.chatgpts.kr" target="_blank" rel="noopener noreferrer">
+          <span class="preview-frame">
+            <span class="preview-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <img src="images/hanja-preview.webp" alt="직접 제작한 한자 학습 웹서비스 화면" width="1440" height="810" loading="eager" decoding="async" fetchpriority="high" onerror="this.closest('.preview-frame').classList.add('is-missing');this.remove();">
+          </span>
+          <span class="preview-label">한자 학습</span>
+        </a>
+      </div>
+    </div>
+
+   </div>
   </div>
 </section>
 
@@ -198,84 +234,99 @@
     <div class="mt-14 flex flex-col gap-8">
       <!-- Card 1: 역사 학습 웹서비스 -->
       <article class="project-card">
-        <div class="project-card-icon icon-mint">
-          <i class="fa-solid fa-landmark"></i>
-        </div>
-        <div class="project-card-body">
-          <div class="flex flex-wrap items-center gap-2">
-            <h3 class="text-xl font-bold text-slate-900">역사 학습 웹서비스</h3>
-            <span class="url-chip">history.chatgpts.kr</span>
+        <a class="project-card-thumb" href="https://history.chatgpts.kr" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <img src="images/history-preview.webp" alt="역사 학습 웹서비스 화면 미리보기" width="1440" height="810" loading="lazy" decoding="async" onerror="this.closest('.project-card-thumb').classList.add('is-missing');this.remove();">
+        </a>
+        <div class="project-card-main">
+          <div class="project-card-icon icon-mint">
+            <i class="fa-solid fa-landmark"></i>
           </div>
-          <p class="mt-3 text-slate-600 leading-loose text-[15px]">
-            한국사·세계사 통합 연표와 대항해 시대 탐험형 학습 콘텐츠를 제공하는 교육형 웹서비스입니다.
-            시대 흐름 비교, 사건 카드, 문제풀이, 게임형 탐험 요소를 직접 기획·구현했습니다.
-          </p>
-          <ul class="mt-4 feature-tags">
-            <li><i class="fa-solid fa-check"></i>한국사·세계사 비교 연표</li>
-            <li><i class="fa-solid fa-check"></i>시대별 사건 카드</li>
-            <li><i class="fa-solid fa-check"></i>바로 문제풀기</li>
-            <li><i class="fa-solid fa-check"></i>대항해 시대 탐험 시뮬레이션</li>
-            <li><i class="fa-solid fa-check"></i>게임형 학습 요소</li>
-          </ul>
-          <a href="https://history.chatgpts.kr" target="_blank" rel="noopener" class="site-visit-btn">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            사이트 보기
-          </a>
+          <div class="project-card-body">
+            <div class="flex flex-wrap items-center gap-2">
+              <h3 class="text-xl font-bold text-slate-900">역사 학습 웹서비스</h3>
+              <span class="url-chip">history.chatgpts.kr</span>
+            </div>
+            <p class="mt-3 text-slate-600 leading-loose text-[15px]">
+              한국사·세계사 통합 연표와 대항해 시대 탐험형 학습 콘텐츠를 제공하는 교육형 웹서비스입니다.
+              시대 흐름 비교, 사건 카드, 문제풀이, 게임형 탐험 요소를 직접 기획·구현했습니다.
+            </p>
+            <ul class="mt-4 feature-tags">
+              <li><i class="fa-solid fa-check"></i>한국사·세계사 비교 연표</li>
+              <li><i class="fa-solid fa-check"></i>시대별 사건 카드</li>
+              <li><i class="fa-solid fa-check"></i>바로 문제풀기</li>
+              <li><i class="fa-solid fa-check"></i>대항해 시대 탐험 시뮬레이션</li>
+              <li><i class="fa-solid fa-check"></i>게임형 학습 요소</li>
+            </ul>
+            <a href="https://history.chatgpts.kr" target="_blank" rel="noopener noreferrer" class="site-visit-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              사이트 보기
+            </a>
+          </div>
         </div>
       </article>
 
       <!-- Card 2: 영어 문법 학습 웹서비스 -->
       <article class="project-card">
-        <div class="project-card-icon icon-brand">
-          <i class="fa-solid fa-spell-check"></i>
-        </div>
-        <div class="project-card-body">
-          <div class="flex flex-wrap items-center gap-2">
-            <h3 class="text-xl font-bold text-slate-900">영어 문법 학습 웹서비스</h3>
-            <span class="url-chip">gram.chatgpts.kr</span>
+        <a class="project-card-thumb" href="https://gram.chatgpts.kr" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <img src="images/gram-preview.webp" alt="영어 문법 학습 웹서비스 화면 미리보기" width="1440" height="810" loading="lazy" decoding="async" onerror="this.closest('.project-card-thumb').classList.add('is-missing');this.remove();">
+        </a>
+        <div class="project-card-main">
+          <div class="project-card-icon icon-brand">
+            <i class="fa-solid fa-spell-check"></i>
           </div>
-          <p class="mt-3 text-slate-600 leading-loose text-[15px]">
-            초·중·고 및 G-TELP 학습자를 위한 영어 문법 학습 웹사이트입니다.
-            쉬운 설명, 예문, 생활 속 예시, 암기 팁, 문제풀이 기능을 제공합니다.
-          </p>
-          <ul class="mt-4 feature-tags">
-            <li><i class="fa-solid fa-check"></i>수준별 문법 학습</li>
-            <li><i class="fa-solid fa-check"></i>쉬운 설명과 예문</li>
-            <li><i class="fa-solid fa-check"></i>문제 풀이</li>
-            <li><i class="fa-solid fa-check"></i>실전 모의고사</li>
-            <li><i class="fa-solid fa-check"></i>학습 기록 및 통계</li>
-          </ul>
-          <a href="https://gram.chatgpts.kr" target="_blank" rel="noopener" class="site-visit-btn">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            사이트 보기
-          </a>
+          <div class="project-card-body">
+            <div class="flex flex-wrap items-center gap-2">
+              <h3 class="text-xl font-bold text-slate-900">영어 문법 학습 웹서비스</h3>
+              <span class="url-chip">gram.chatgpts.kr</span>
+            </div>
+            <p class="mt-3 text-slate-600 leading-loose text-[15px]">
+              초·중·고 및 G-TELP 학습자를 위한 영어 문법 학습 웹사이트입니다.
+              쉬운 설명, 예문, 생활 속 예시, 암기 팁, 문제풀이 기능을 제공합니다.
+            </p>
+            <ul class="mt-4 feature-tags">
+              <li><i class="fa-solid fa-check"></i>수준별 문법 학습</li>
+              <li><i class="fa-solid fa-check"></i>쉬운 설명과 예문</li>
+              <li><i class="fa-solid fa-check"></i>문제 풀이</li>
+              <li><i class="fa-solid fa-check"></i>실전 모의고사</li>
+              <li><i class="fa-solid fa-check"></i>학습 기록 및 통계</li>
+            </ul>
+            <a href="https://gram.chatgpts.kr" target="_blank" rel="noopener noreferrer" class="site-visit-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              사이트 보기
+            </a>
+          </div>
         </div>
       </article>
 
       <!-- Card 3: 한자 학습 웹서비스 -->
       <article class="project-card">
-        <div class="project-card-icon icon-mint">
-          <i class="fa-solid fa-graduation-cap"></i>
-        </div>
-        <div class="project-card-body">
-          <div class="flex flex-wrap items-center gap-2">
-            <h3 class="text-xl font-bold text-slate-900">한자 학습 웹서비스</h3>
-            <span class="url-chip">hanja.chatgpts.kr</span>
+        <a class="project-card-thumb" href="https://hanja.chatgpts.kr" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <img src="images/hanja-preview.webp" alt="한자 학습 웹서비스 화면 미리보기" width="1440" height="810" loading="lazy" decoding="async" onerror="this.closest('.project-card-thumb').classList.add('is-missing');this.remove();">
+        </a>
+        <div class="project-card-main">
+          <div class="project-card-icon icon-mint">
+            <i class="fa-solid fa-graduation-cap"></i>
           </div>
-          <p class="mt-3 text-slate-600 leading-loose text-[15px]">
-            한자 학습, 퀴즈, 급수별 학습 콘텐츠를 제공하는 교육형 웹서비스입니다.
-            AI 도구를 활용한 콘텐츠 구성, UI 설계, 웹 배포 경험을 담고 있습니다.
-          </p>
-          <ul class="mt-4 feature-tags">
-            <li><i class="fa-solid fa-check"></i>급수별 한자 학습</li>
-            <li><i class="fa-solid fa-check"></i>퀴즈와 문제 풀이</li>
-            <li><i class="fa-solid fa-check"></i>학습 콘텐츠 구성</li>
-            <li><i class="fa-solid fa-check"></i>웹 기반 학습 서비스 운영</li>
-          </ul>
-          <a href="https://hanja.chatgpts.kr" target="_blank" rel="noopener" class="site-visit-btn">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            사이트 보기
-          </a>
+          <div class="project-card-body">
+            <div class="flex flex-wrap items-center gap-2">
+              <h3 class="text-xl font-bold text-slate-900">한자 학습 웹서비스</h3>
+              <span class="url-chip">hanja.chatgpts.kr</span>
+            </div>
+            <p class="mt-3 text-slate-600 leading-loose text-[15px]">
+              한자 학습, 퀴즈, 급수별 학습 콘텐츠를 제공하는 교육형 웹서비스입니다.
+              AI 도구를 활용한 콘텐츠 구성, UI 설계, 웹 배포 경험을 담고 있습니다.
+            </p>
+            <ul class="mt-4 feature-tags">
+              <li><i class="fa-solid fa-check"></i>급수별 한자 학습</li>
+              <li><i class="fa-solid fa-check"></i>퀴즈와 문제 풀이</li>
+              <li><i class="fa-solid fa-check"></i>학습 콘텐츠 구성</li>
+              <li><i class="fa-solid fa-check"></i>웹 기반 학습 서비스 운영</li>
+            </ul>
+            <a href="https://hanja.chatgpts.kr" target="_blank" rel="noopener noreferrer" class="site-visit-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              사이트 보기
+            </a>
+          </div>
         </div>
       </article>
     </div>
@@ -499,7 +550,7 @@
         <div class="qr-frame">
           <img src="assets/qr-portfolio.svg" alt="포트폴리오 사이트 ai.chatgpts.kr 접속용 QR코드" width="140" height="140" loading="lazy">
         </div>
-        <a href="https://ai.chatgpts.kr" target="_blank" rel="noopener" class="qr-url">ai.chatgpts.kr</a>
+        <a href="https://ai.chatgpts.kr" target="_blank" rel="noopener noreferrer" class="qr-url">ai.chatgpts.kr</a>
       </aside>
     </div>
   </div>
@@ -511,9 +562,9 @@
   <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
     <p>&copy; 2026 김진형. All rights reserved.</p>
     <div class="flex flex-wrap items-center justify-center gap-5">
-      <a href="https://history.chatgpts.kr" target="_blank" rel="noopener" class="hover:text-white transition-colors">history.chatgpts.kr</a>
-      <a href="https://gram.chatgpts.kr" target="_blank" rel="noopener" class="hover:text-white transition-colors">gram.chatgpts.kr</a>
-      <a href="https://hanja.chatgpts.kr" target="_blank" rel="noopener" class="hover:text-white transition-colors">hanja.chatgpts.kr</a>
+      <a href="https://history.chatgpts.kr" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">history.chatgpts.kr</a>
+      <a href="https://gram.chatgpts.kr" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">gram.chatgpts.kr</a>
+      <a href="https://hanja.chatgpts.kr" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">hanja.chatgpts.kr</a>
     </div>
   </div>
 </footer>
