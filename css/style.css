@@ -132,9 +132,6 @@ section[id] {
   display: block;
   position: relative;
   aspect-ratio: 16 / 9;
-  /* 카드 폭이 넓은 데스크톱에서 썸네일이 본문을 밀어내지 않도록 높이를 제한합니다.
-     세 카드 모두 동일 규격이라 배너 높이는 서로 통일됩니다. */
-  max-height: 17rem;
   overflow: hidden;
   border-radius: 1rem;
   border: 1px solid #e6edf5;
