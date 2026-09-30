@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김진형 | AI 활용 강사 포트폴리오 - 코딩 몰라도 AI로 나만의 웹사이트 만들기</title>
+<meta name="description" content="현직 PM 김진형의 AI 활용 실습 강의 포트폴리오. 한자·영어문법·역사 학습 웹서비스 제작 경험을 바탕으로 AI 도구로 웹사이트를 기획·제작·배포하는 방법을 안내합니다.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['"Noto Sans KR"', 'sans-serif'],
+        },
+        colors: {
+          brand: {
+            50: '#f0f6ff',
+            100: '#dbe9ff',
+            200: '#b8d4ff',
+            300: '#8ab8ff',
+            400: '#5a97ff',
+            500: '#3478f6',
+            600: '#255fd6',
+            700: '#1f4bab',
+            800: '#1e3f88',
+            900: '#1c3670',
+          },
+          mint: {
+            50: '#eefcf7',
+            100: '#d6f5e9',
+            200: '#aeebd3',
+            300: '#7edcbb',
+            400: '#4bc79f',
+            500: '#28ac86',
+            600: '#1c8c6c',
+            700: '#186f57',
+          }
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased">
+
+<!-- ===================== Header / Nav ===================== -->
+<header id="site-header" class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-sm border-b border-slate-100">
+  <nav class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="#hero-section" class="flex items-center gap-2 font-bold text-slate-800">
+      <span class="w-8 h-8 rounded-lg bg-brand-500 text-white flex items-center justify-center text-sm">
+        <i class="fa-solid fa-robot"></i>
+      </span>
+      <span class="text-sm sm:text-base">김진형 · AI 활용 강사</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600">
+      <a href="#about-section" class="hover:text-brand-600 transition-colors">소개</a>
+      <a href="#portfolio-section" class="hover:text-brand-600 transition-colors">제작 사례</a>
+      <a href="#credentials-section" class="hover:text-brand-600 transition-colors">자격·경험</a>
+      <a href="#course-section" class="hover:text-brand-600 transition-colors">강의 안내</a>
+      <a href="#features-section" class="hover:text-brand-600 transition-colors">특징</a>
+      <a href="#contact-section" class="hover:text-brand-600 transition-colors">문의</a>
+    </div>
+    <a href="#contact-section" class="hidden sm:inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors">
+      강의 문의하기
+    </a>
+    <button id="mobile-menu-btn" class="lg:hidden text-slate-700 text-xl" aria-label="메뉴 열기">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </nav>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-5 py-4 flex flex-col gap-4 text-sm font-medium text-slate-700">
+    <a href="#about-section" class="mobile-link">소개</a>
+    <a href="#portfolio-section" class="mobile-link">제작 사례</a>
+    <a href="#credentials-section" class="mobile-link">자격·경험</a>
+    <a href="#course-section" class="mobile-link">강의 안내</a>
+    <a href="#features-section" class="mobile-link">특징</a>
+    <a href="#contact-section" class="mobile-link">문의</a>
+  </div>
+</header>
+
+<main>
+<!-- ===================== 1. Hero Section ===================== -->
+<section id="hero-section" class="relative pt-40 pb-24 sm:pt-48 sm:pb-32 overflow-hidden hero-bg">
+  <div class="absolute inset-0 -z-10 hero-glow" aria-hidden="true"></div>
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+
+    <h1 class="hero-title text-4xl sm:text-6xl font-black leading-tight tracking-tight text-slate-900">코딩 몰라도 AI로 나만의 웹사이트 만들기</h1>
+
+    <p class="mt-6 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+      현직 PM이 직접 만든 한자·영어문법·역사 학습 웹서비스 사례를 바탕으로,<br class="hidden sm:block">
+      AI 도구를 활용해 누구나 웹사이트를 기획하고 제작·배포하는 방법을 알려드립니다.
+    </p>
+
+    <div class="mt-7 flex flex-wrap items-center justify-center gap-2">
+      <span class="hero-badge"><i class="fa-solid fa-id-badge"></i>현직 PM</span>
+      <span class="hero-badge"><i class="fa-solid fa-chalkboard-user"></i>AI 활용 강사</span>
+      <span class="hero-badge"><i class="fa-solid fa-certificate"></i>정보처리기사</span>
+      <span class="hero-badge hero-badge-outline"><i class="fa-regular fa-clock"></i>AICE Associate 준비 중</span>
+    </div>
+
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+      <a href="#contact-section" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-7 py-3.5 rounded-full shadow-lg shadow-brand-200 transition-colors">
+        <i class="fa-regular fa-paper-plane"></i>
+        강의 문의하기
+      </a>
+      <a href="#portfolio-section" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 font-bold px-7 py-3.5 rounded-full border border-slate-200 shadow-sm transition-colors">
+        <i class="fa-regular fa-folder-open"></i>
+        제작 사례 보기
+      </a>
+    </div>
+
+    <p class="mt-10 text-xs sm:text-sm text-slate-400">
+      도서관 · 문화센터 · 평생학습관 · 주민센터 실습형 특강 제안 가능
+    </p>
+  </div>
+</section>
+
+<!-- ===================== 2. About Section ===================== -->
+<section id="about-section" class="py-20 sm:py-28 bg-white">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="grid md:grid-cols-[220px_1fr] gap-10 sm:gap-14 items-start">
+      <div class="flex md:flex-col items-center md:items-start gap-4">
+        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-500 text-4xl shrink-0">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+          <p class="text-lg font-bold text-slate-900">김진형</p>
+          <p class="text-sm text-slate-500 mt-1 leading-relaxed">현직 PM<br>AI 활용 강사</p>
+        </div>
+      </div>
+
+      <div>
+        <span class="text-brand-600 text-sm font-bold tracking-wide">ABOUT</span>
+        <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-slate-900">
+          안녕하세요. 김진형입니다.
+        </h2>
+        <p class="mt-5 text-slate-600 leading-loose text-[15px] sm:text-base">
+          현직 PM으로 디지털 서비스 기획과 프로젝트 관리를 담당하고 있으며, 업무 외 개인 프로젝트로
+          AI 도구를 활용한 웹사이트와 앱을 직접 기획·제작·운영하고 있습니다.
+        </p>
+        <p class="mt-4 text-slate-600 leading-loose text-[15px] sm:text-base">
+          복잡한 개발 이론보다 <strong class="text-slate-800 font-semibold">초보자도 직접 결과물을 만들어보는 실습형 강의</strong>를 지향합니다.
+        </p>
+
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+          <div class="keyword-card">
+            <i class="fa-solid fa-briefcase"></i>
+            <p>현직 PM</p>
+          </div>
+          <div class="keyword-card">
+            <i class="fa-solid fa-certificate"></i>
+            <p>정보처리기사</p>
+          </div>
+          <div class="keyword-card">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <p>AI 도구 활용</p>
+          </div>
+          <div class="keyword-card">
+            <i class="fa-solid fa-laptop-code"></i>
+            <p>웹사이트·앱 제작 경험</p>
+          </div>
+          <div class="keyword-card">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <p>실습형 강의</p>
+          </div>
+          <div class="keyword-card">
+            <i class="fa-solid fa-book-open"></i>
+            <p>교육형 콘텐츠 제작</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 3. Portfolio Section ===================== -->
+<section id="portfolio-section" class="py-20 sm:py-28 section-bg-soft">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="text-brand-600 text-sm font-bold tracking-wide">PORTFOLIO</span>
+      <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-slate-900">직접 만들고 운영한 제작 사례</h2>
+      <p class="mt-4 text-slate-500 text-[15px] sm:text-base leading-relaxed">이론이 아닌, 실제 운영 중인 교육형 웹서비스로 검증한 경험을 공유합니다.</p>
+    </div>
+
+    <div class="mt-14 flex flex-col gap-8">
+      <!-- Card 1: 역사 학습 웹서비스 -->
+      <article class="project-card">
+        <div class="project-card-icon icon-mint">
+          <i class="fa-solid fa-landmark"></i>
+        </div>
+        <div class="project-card-body">
+          <div class="flex flex-wrap items-center gap-2">
+            <h3 class="text-xl font-bold text-slate-900">역사 학습 웹서비스</h3>
+            <span class="url-chip">history.chatgpts.kr</span>
+          </div>
+          <p class="mt-3 text-slate-600 leading-loose text-[15px]">
+            한국사·세계사 통합 연표와 대항해 시대 탐험형 학습 콘텐츠를 제공하는 교육형 웹서비스입니다.
+            시대 흐름 비교, 사건 카드, 문제풀이, 게임형 탐험 요소를 직접 기획·구현했습니다.
+          </p>
+          <ul class="mt-4 feature-tags">
+            <li><i class="fa-solid fa-check"></i>한국사·세계사 비교 연표</li>
+            <li><i class="fa-solid fa-check"></i>시대별 사건 카드</li>
+            <li><i class="fa-solid fa-check"></i>바로 문제풀기</li>
+            <li><i class="fa-solid fa-check"></i>대항해 시대 탐험 시뮬레이션</li>
+            <li><i class="fa-solid fa-check"></i>게임형 학습 요소</li>
+          </ul>
+          <a href="https://history.chatgpts.kr" target="_blank" rel="noopener" class="site-visit-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            사이트 보기
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2: 영어 문법 학습 웹서비스 -->
+      <article class="project-card">
+        <div class="project-card-icon icon-brand">
+          <i class="fa-solid fa-spell-check"></i>
+        </div>
+        <div class="project-card-body">
+          <div class="flex flex-wrap items-center gap-2">
+            <h3 class="text-xl font-bold text-slate-900">영어 문법 학습 웹서비스</h3>
+            <span class="url-chip">gram.chatgpts.kr</span>
+          </div>
+          <p class="mt-3 text-slate-600 leading-loose text-[15px]">
+            초·중·고 및 G-TELP 학습자를 위한 영어 문법 학습 웹사이트입니다.
+            쉬운 설명, 예문, 생활 속 예시, 암기 팁, 문제풀이 기능을 제공합니다.
+          </p>
+          <ul class="mt-4 feature-tags">
+            <li><i class="fa-solid fa-check"></i>수준별 문법 학습</li>
+            <li><i class="fa-solid fa-check"></i>쉬운 설명과 예문</li>
+            <li><i class="fa-solid fa-check"></i>문제 풀이</li>
+            <li><i class="fa-solid fa-check"></i>실전 모의고사</li>
+            <li><i class="fa-solid fa-check"></i>학습 기록 및 통계</li>
+          </ul>
+          <a href="https://gram.chatgpts.kr" target="_blank" rel="noopener" class="site-visit-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            사이트 보기
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 3: 한자 학습 웹서비스 -->
+      <article class="project-card">
+        <div class="project-card-icon icon-mint">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="project-card-body">
+          <div class="flex flex-wrap items-center gap-2">
+            <h3 class="text-xl font-bold text-slate-900">한자 학습 웹서비스</h3>
+            <span class="url-chip">hanja.chatgpts.kr</span>
+          </div>
+          <p class="mt-3 text-slate-600 leading-loose text-[15px]">
+            한자 학습, 퀴즈, 급수별 학습 콘텐츠를 제공하는 교육형 웹서비스입니다.
+            AI 도구를 활용한 콘텐츠 구성, UI 설계, 웹 배포 경험을 담고 있습니다.
+          </p>
+          <ul class="mt-4 feature-tags">
+            <li><i class="fa-solid fa-check"></i>급수별 한자 학습</li>
+            <li><i class="fa-solid fa-check"></i>퀴즈와 문제 풀이</li>
+            <li><i class="fa-solid fa-check"></i>학습 콘텐츠 구성</li>
+            <li><i class="fa-solid fa-check"></i>웹 기반 학습 서비스 운영</li>
+          </ul>
+          <a href="https://hanja.chatgpts.kr" target="_blank" rel="noopener" class="site-visit-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            사이트 보기
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 4. Credentials Section ===================== -->
+<section id="credentials-section" class="py-20 sm:py-28 bg-white">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="text-brand-600 text-sm font-bold tracking-wide">CREDENTIALS</span>
+      <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-slate-900">자격 및 경험</h2>
+      <p class="mt-4 text-slate-500 text-[15px] sm:text-base leading-relaxed">직무 자격과 실제 제작·운영 경험을 바탕으로 강의를 준비합니다.</p>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 gap-4 sm:gap-5">
+      <div class="credential-item">
+        <span class="credential-icon"><i class="fa-solid fa-certificate"></i></span>
+        <span>정보처리기사</span>
+      </div>
+      <div class="credential-item">
+        <span class="credential-icon"><i class="fa-solid fa-certificate"></i></span>
+        <span>SCJP, Sun Certified Java Programmer</span>
+      </div>
+      <div class="credential-item">
+        <span class="credential-icon"><i class="fa-regular fa-clock"></i></span>
+        <span>AICE Associate 준비 중</span>
+      </div>
+      <div class="credential-item">
+        <span class="credential-icon"><i class="fa-solid fa-globe"></i></span>
+        <span>AI 도구 기반 웹사이트 제작·운영 경험</span>
+      </div>
+      <div class="credential-item">
+        <span class="credential-icon"><i class="fa-solid fa-mobile-screen-button"></i></span>
+        <span>모바일 앱 제작 및 Google Play 등록 경험</span>
+      </div>
+      <div class="credential-item">
+        <span class="credential-icon"><i class="fa-solid fa-book-open"></i></span>
+        <span>교육형 콘텐츠 기획 및 웹서비스 구현 경험</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 5. Course Section ===================== -->
+<section id="course-section" class="py-20 sm:py-28 section-bg-soft">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="text-brand-600 text-sm font-bold tracking-wide">COURSE</span>
+      <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-slate-900">강의 안내</h2>
+      <p class="mt-4 text-slate-500 text-[15px] sm:text-base leading-relaxed">누구나 실습으로 결과물을 완성하는 커리큘럼입니다.</p>
+    </div>
+
+    <!-- Main course card -->
+    <div class="mt-12 bg-gradient-to-br from-brand-600 to-brand-800 rounded-3xl p-8 sm:p-12 text-white shadow-xl">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+          <span class="inline-flex items-center gap-2 bg-white/15 text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-full">
+            <i class="fa-solid fa-star"></i> 대표 강의
+          </span>
+          <h3 class="mt-4 text-xl sm:text-2xl font-bold leading-snug">
+            코딩 몰라도 AI로 나만의 홈페이지 만들기
+          </h3>
+          <p class="mt-2 text-brand-100 text-sm sm:text-base">2시간 원데이 실습 특강</p>
+        </div>
+        <div class="shrink-0 md:text-right">
+          <a href="#contact-section" class="inline-flex items-center justify-center gap-2 bg-white text-brand-700 font-bold px-6 py-3 rounded-full hover:bg-brand-50 transition-colors">
+            강의 문의하기
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 gap-4" role="list">
+        <div class="course-step" role="listitem">
+          <span class="step-num">1</span>
+          <span>AI 웹 제작 도구 소개</span>
+        </div>
+        <div class="course-step" role="listitem">
+          <span class="step-num">2</span>
+          <span>홈페이지 주제 정하기</span>
+        </div>
+        <div class="course-step" role="listitem">
+          <span class="step-num">3</span>
+          <span>AI로 웹페이지 초안 만들기</span>
+        </div>
+        <div class="course-step" role="listitem">
+          <span class="step-num">4</span>
+          <span>문구와 디자인 수정하기</span>
+        </div>
+        <div class="course-step" role="listitem">
+          <span class="step-num">5</span>
+          <span>Vercel로 웹사이트 배포하기</span>
+        </div>
+        <div class="course-step" role="listitem">
+          <span class="step-num">6</span>
+          <span>완성 링크 공유하기</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Target audience -->
+    <div class="mt-14">
+      <h4 class="text-lg font-bold text-slate-900 text-center mb-8">이런 분들께 추천합니다</h4>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="audience-card">
+          <i class="fa-solid fa-user-plus"></i>
+          <p>AI 도구를 처음 써보는 일반인</p>
+        </div>
+        <div class="audience-card">
+          <i class="fa-solid fa-id-card"></i>
+          <p>개인 홈페이지나 포트폴리오가 필요한 분</p>
+        </div>
+        <div class="audience-card">
+          <i class="fa-solid fa-people-group"></i>
+          <p>도서관·문화센터 디지털 활용 강좌 수강생</p>
+        </div>
+        <div class="audience-card">
+          <i class="fa-solid fa-lightbulb"></i>
+          <p>코딩 없이 결과물을 만들어보고 싶은 분</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Follow-up courses -->
+    <div class="mt-14">
+      <h4 class="text-lg font-bold text-slate-900 text-center mb-8">심화 · 후속 강의</h4>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="follow-course-card">
+          <div class="w-11 h-11 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-newspaper"></i>
+          </div>
+          <p class="mt-4 font-bold text-slate-800">AI로 콘텐츠 사이트 만들기</p>
+        </div>
+        <div class="follow-course-card">
+          <div class="w-11 h-11 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <p class="mt-4 font-bold text-slate-800">AI 웹사이트 운영과 방문자 분석 기초</p>
+        </div>
+        <div class="follow-course-card">
+          <div class="w-11 h-11 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <p class="mt-4 font-bold text-slate-800">Claude Code / v0 활용 입문</p>
+        </div>
+        <div class="follow-course-card">
+          <div class="w-11 h-11 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </div>
+          <p class="mt-4 font-bold text-slate-800">AI로 교육 콘텐츠 만들기</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 6. Features Section ===================== -->
+<section id="features-section" class="py-20 sm:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="text-brand-600 text-sm font-bold tracking-wide">FEATURES</span>
+      <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-slate-900">이런 강의를 지향합니다</h2>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+        <p class="font-bold text-slate-800 mt-4">이론보다 실습 중심</p>
+        <p class="text-sm text-slate-500 mt-2 leading-relaxed">직접 만들어보며 배우는 방식으로 진행합니다.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-seedling"></i></div>
+        <p class="font-bold text-slate-800 mt-4">초보자 친화적 설명</p>
+        <p class="text-sm text-slate-500 mt-2 leading-relaxed">비전공자, IT 초보자도 쉽게 따라올 수 있도록 설명합니다.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-chart-simple"></i></div>
+        <p class="font-bold text-slate-800 mt-4">실제 운영 사례 기반</p>
+        <p class="text-sm text-slate-500 mt-2 leading-relaxed">직접 운영 중인 교육형 웹서비스 경험을 바탕으로 설명합니다.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-flag-checkered"></i></div>
+        <p class="font-bold text-slate-800 mt-4">결과물 완성 목표</p>
+        <p class="text-sm text-slate-500 mt-2 leading-relaxed">강의 종료 시 완성된 웹페이지 링크를 갖는 것을 목표로 합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 7. Contact Section ===================== -->
+<section id="contact-section" class="py-20 sm:py-28 section-bg-soft">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8">
+    <div class="bg-white border border-brand-100 rounded-3xl p-8 sm:p-12 text-center shadow-sm">
+      <span class="text-brand-600 text-sm font-bold tracking-wide">CONTACT</span>
+      <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-slate-900">강의 문의</h2>
+      <p class="mt-4 text-slate-600 leading-loose text-[15px] sm:text-base">
+        도서관, 문화센터, 평생학습관, 주민센터, 소규모 모임 대상<br class="hidden sm:block">
+        AI 활용 실습 강의 문의를 받습니다.
+      </p>
+      <p class="mt-2 text-slate-500 leading-loose text-sm sm:text-[15px]">
+        강의계획서와 강사 프로필 PDF는 요청 시 전달드립니다.
+      </p>
+
+      <div class="mt-8 max-w-md mx-auto">
+        <a href="mailto:phiskim@gmail.com" class="contact-row">
+          <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+          <span>
+            <span class="block text-xs text-slate-400">Email</span>
+            <span class="font-semibold text-slate-800">phiskim@gmail.com</span>
+          </span>
+        </a>
+      </div>
+
+      <a href="mailto:phiskim@gmail.com" class="mt-9 inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-3.5 rounded-full shadow-lg shadow-brand-200 transition-colors">
+        <i class="fa-regular fa-paper-plane"></i>
+        메일로 문의하기
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== Footer ===================== -->
+<footer class="bg-slate-900 text-slate-400 py-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+    <p>&copy; 2026 김진형. All rights reserved.</p>
+    <div class="flex flex-wrap items-center justify-center gap-5">
+      <a href="https://history.chatgpts.kr" target="_blank" rel="noopener" class="hover:text-white transition-colors">history.chatgpts.kr</a>
+      <a href="https://gram.chatgpts.kr" target="_blank" rel="noopener" class="hover:text-white transition-colors">gram.chatgpts.kr</a>
+      <a href="https://hanja.chatgpts.kr" target="_blank" rel="noopener" class="hover:text-white transition-colors">hanja.chatgpts.kr</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#contact-section" id="fab-contact" class="sm:hidden">
+  <i class="fa-regular fa-paper-plane"></i>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
