@@ -364,6 +364,59 @@ section[id] {
   justify-content: center;
 }
 
+/* ===================== Portfolio QR card ===================== */
+.qr-card {
+  background: #fff;
+  border: 1px solid #dbe9ff;
+  border-radius: 1.5rem;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  box-shadow: 0 4px 14px -10px rgba(15, 23, 42, 0.1);
+}
+
+.qr-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1f4bab;
+}
+
+.qr-desc {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: #64748b;
+}
+
+.qr-frame {
+  margin: 1.1rem auto 0;
+  width: fit-content;
+  padding: 0.6rem;
+  background: #fff;
+  border: 1px solid #e6edf5;
+  border-radius: 0.9rem;
+}
+
+.qr-frame img {
+  display: block;
+  width: 140px;
+  height: 140px;
+}
+
+.qr-url {
+  display: inline-block;
+  margin-top: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #255fd6;
+  word-break: break-all;
+  transition: color 0.2s ease;
+}
+
+.qr-url:hover {
+  color: #1f4bab;
+  text-decoration: underline;
+}
+
 /* ===================== Floating mobile CTA ===================== */
 #fab-contact {
   position: fixed;
