@@ -6,7 +6,8 @@
   "scripts": {
     "capture:previews": "node scripts/capture-previews.js",
     "capture:previews:mobile": "node scripts/capture-previews.js --mobile",
-    "serve": "npx --yes http-server . -p 4173 -c-1"
+    "serve": "npx --yes http-server . -p 4173 -c-1",
+    "check:lecture-plan": "node scripts/check-lecture-plan.js"
   },
   "devDependencies": {
     "playwright": "^1.49.0",
