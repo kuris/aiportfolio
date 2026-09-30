@@ -102,7 +102,7 @@ body {
 
 /* ===================== 헤더 ===================== */
 .sheet-head {
-  padding-bottom: 2.8mm;
+  padding-bottom: 2.4mm;
   border-bottom: 2px solid var(--brand-100);
 }
 
@@ -154,8 +154,8 @@ body {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 2.6mm 3.2mm;
-  margin-top: 2.6mm;
+  padding: 2.3mm 3mm;
+  margin-top: 2.2mm;
 }
 
 .card h2 {
@@ -187,8 +187,8 @@ body {
 }
 
 .card-overview p {
-  font-size: 9.2pt;
-  line-height: 1.55;
+  font-size: 9.1pt;
+  line-height: 1.5;
   color: var(--ink-2);
 }
 
@@ -207,10 +207,10 @@ body {
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2.6mm;
+  gap: 2.2mm;
 }
 
-.grid-2 > .card { margin-top: 2.6mm; }
+.grid-2 > .card { margin-top: 2.2mm; }
 
 /* ===================== 리스트 ===================== */
 .list {
@@ -222,8 +222,8 @@ body {
 .list li {
   position: relative;
   padding-left: 3.8mm;
-  margin-top: 1.05mm;
-  line-height: 1.42;
+  margin-top: 0.9mm;
+  line-height: 1.4;
 }
 
 .list li:first-child { margin-top: 0; }
@@ -258,7 +258,7 @@ body {
 .curriculum th,
 .curriculum td {
   border: 1px solid var(--line);
-  padding: 0.95mm 2.4mm;
+  padding: 0.75mm 2.4mm;
   text-align: left;
   vertical-align: middle;
 }
@@ -309,11 +309,18 @@ body {
   line-height: 1.5;
 }
 
+.credentials-label {
+  margin-top: 2mm !important;
+  font-size: 7.6pt;
+  font-weight: 700;
+  color: var(--brand-700);
+}
+
 .credentials {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2mm;
-  margin: 1.8mm 0 0;
+  margin: 1.2mm 0 0;
   padding: 0;
   list-style: none;
 }
@@ -379,8 +386,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2mm;
-  margin-top: 2.6mm;
-  padding-top: 2mm;
+  margin-top: 2.2mm;
+  padding-top: 1.7mm;
   border-top: 1px solid var(--line);
   font-size: 7.8pt;
   color: var(--ink-3);

@@ -15,7 +15,7 @@
   - 역사 학습 웹서비스 (history.chatgpts.kr)
   - 영어 문법 학습 웹서비스 (gram.chatgpts.kr)
   - 한자 학습 웹서비스 (hanja.chatgpts.kr)
-- **Credentials Section**: 자격 및 경험 5개 항목을 카드 리스트로 정리 (정보처리기사, SCJP, AI 도구 기반 웹사이트 제작·운영 경험, 모바일 앱 제작 및 Google Play 등록 경험, 교육형 콘텐츠 기획 및 웹서비스 구현 경험)
+- **Credentials Section**: 자격 및 경험 5개 항목을 카드 리스트로 정리 (정보처리기사, ISTQB Certified Tester Foundation Level, AI 도구 기반 웹사이트·앱 제작 및 운영 경험, 모바일 앱 제작 및 Google Play 등록 경험, 교육형 콘텐츠 기획 및 웹서비스 구현 경험)
 - **Course Section**: 대표 강의(2시간 원데이 특강) 6단계 커리큘럼(번호 배지 1개만 사용, 중복 번호 표시 없음), 추천 대상 4종, 후속 심화 강의 4종
 - **Features Section**: 강의 특징 4가지 카드 (실습 중심 / 초보자 친화 / 실제 운영 사례 / 결과물 완성 목표)
 - **Contact Section**: 실제 이메일(phiskim@gmail.com)로 연결, 강의계획서·강사 프로필 제공 안내 문구, 메일 문의 CTA
@@ -32,7 +32,7 @@
 - 파일: `lecture-plan/index.html`, `css/lecture-plan.css`
 - 제목: **AI 홈페이지 만들기 강의계획서**
 - 구성: 헤더(제목·부제·배지 4종) → 강의 개요 → 강의 대상 / 강의 목표 → 세부 커리큘럼(총 120분) →
-  준비물 / 강의 방식 → 강사 소개 + QR → 푸터(문의 이메일·포트폴리오)
+  준비물 / 강의 방식 → 강사 소개(보유 자격 및 경험) + QR → 푸터(문의 이메일·포트폴리오)
 - 화면 상단 버튼: **PDF로 저장하기**(`window.print()`), **포트폴리오 보기**(ai.chatgpts.kr)
 - 인쇄: `@page { size: A4; margin: 12mm }`, 버튼·배경 장식 숨김, 흰 배경 중심,
   카드·표는 `break-inside: avoid` 로 페이지 경계에서 잘리지 않게 처리
